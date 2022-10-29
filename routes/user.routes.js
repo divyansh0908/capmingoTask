@@ -9,5 +9,8 @@ module.exports = function(app) {
     );
     next();
   });
-
+app.post("/favouriteTeacher", [authJwt.verifyToken], controller.addFavouriteTeacher);
+app.delete("/favouriteTeacher", [authJwt.verifyToken], controller.removeFavouriteTeacher);
+app.get("/favouriteTeacher", [authJwt.verifyToken], controller.getMaximumFavouriteTeachers);
+app.get("/getTeacherByName" , [authJwt.verifyToken], controller.getTeachersByName);
 };

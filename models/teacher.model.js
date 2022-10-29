@@ -3,10 +3,8 @@ const mongoose = require("mongoose");
 const consignment = mongoose.model(
   "consignment",
   new mongoose.Schema({
-    id: String,
     name:String,
     subject: String,
-
     path:Object
   },  { collection: "teacher" }),
 

@@ -6,7 +6,6 @@ const Teacher = db.teacher;
 exports.addTeacher = (req, res) => {
     const teacher = new Teacher({
         name: req.body.name,
-        id: req.body.id,
         subject: req.body.subject
     });
     teacher.save((err, teacher) => {
